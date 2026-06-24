@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="arbabys_icon_B_rattle_400.png" />
-  <link rel="apple-touch-icon" href="arbabys_icon_B_ribeye_1024.png" />
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Arbaby's — We Have the Meat Comparisons!</title>
-<meta name="description" content="A pregnancy size tracker, but every comparison is a cut of meat." />
+<meta name="description" content="A pregnancy size tracker, but every comparison is a cut of meat. For Maggie." />
+
+<!-- Open Graph: rich previews in iMessage, Facebook, LinkedIn, Slack, etc. -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://arbabys.vercel.app/" />
+<meta property="og:title" content="Arbaby's — We Have the Meat Comparisons!" />
+<meta property="og:description" content="The pregnancy size tracker that compares your baby to cuts of meat instead of fruit." />
+<meta property="og:image" content="https://arbabys.vercel.app/arbabys-og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter / X card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Arbaby's — We Have the Meat Comparisons!" />
+<meta name="twitter:description" content="A pregnancy size tracker, but every comparison is a cut of meat." />
+<meta name="twitter:image" content="https://arbabys.vercel.app/arbabys-og-image.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet" />
@@ -606,7 +619,7 @@ nextBtn.addEventListener('click', ()=> setWeek(Number(sel.value)+1));
 /* copy bragging rights */
 document.getElementById('copyBtn').addEventListener('click', ()=>{
   const w = Number(sel.value), d = DATA[w];
-  const txt = `🥩 Week ${w}: my baby is the size of ${d.name.toLowerCase()}. (Per Arbaby's — the only pregnancy tracker that respects a good brisket. Visit the meat-ernity ward at arbabys.vercel.app!)`;
+  const txt = `🥩 Week ${w}: my baby is the size of ${d.name.toLowerCase()}. (Per Arbaby's — the only pregnancy tracker that respects a good brisket. Visit the meat-ernity ward at arbabys.vercel.app)`;
   const btn = document.getElementById('copyBtn');
   navigator.clipboard.writeText(txt).then(()=>{
     btn.textContent = '✓ Copied!';
