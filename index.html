@@ -604,7 +604,7 @@ nextBtn.addEventListener('click', ()=> setWeek(Number(sel.value)+1));
 /* copy bragging rights */
 document.getElementById('copyBtn').addEventListener('click', ()=>{
   const w = Number(sel.value), d = DATA[w];
-  const txt = `🥩 Week ${w}: my baby is the size of ${d.name.toLowerCase()}. (Per Arbaby's — the only pregnancy tracker that respects a good brisket.)`;
+  const txt = `🥩 Week ${w}: my baby is the size of ${d.name.toLowerCase()}. (Per Arbaby's — the only pregnancy tracker that respects a good brisket. Visit the meat-ernity ward at arbabys.vercel.app!)`;
   const btn = document.getElementById('copyBtn');
   navigator.clipboard.writeText(txt).then(()=>{
     btn.textContent = '✓ Copied!';
